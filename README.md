@@ -23,7 +23,7 @@ sudo dnf install -y amdgpu-vulkan-switcher
 
 4. Run the application using the amdgpu-pro vulkan driver using `vk_pro <command>`
 
-For example, if you want to use obs with AMF support in the 'Custom FFmpeg' option or (https://github.com/Xaymar/obs-streamfx)[StreamFX] plugin:
+For example, if you want to use obs with AMF support in the 'Custom FFmpeg' option or [https://github.com/Xaymar/obs-streamfx](StreamFX) plugin:
 
 ```
 vk_pro obs
@@ -34,7 +34,7 @@ vk_pro obs
 If capturing another vulkan source, such as a video game, you must -also- run the game using vk_pro. For example with steam games:
 
 ```
-vkpro %command%
+vk_pro %command%
 ```
 
 Otherwise the game may try to use RADV, leading to a GPU lockup/crash.

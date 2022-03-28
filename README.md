@@ -23,7 +23,7 @@ sudo dnf install -y amdgpu-vulkan-switcher
 
 4. Run the application using the amdgpu-pro vulkan driver using `vk_pro <command>`
 
-For example, if you want to use obs with AMF support in the 'Custom FFmpeg' option or [https://github.com/Xaymar/obs-streamfx](StreamFX) plugin:
+For example, if you want to use obs with AMF support in the 'Custom FFmpeg' option or [StreamFX](https://github.com/Xaymar/obs-streamfx) plugin:
 
 ```
 vk_pro obs

@@ -25,7 +25,7 @@
 
 Name:           amdgpu-pro-amf
 Version:        %{major}.%{minor}
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        AMD AMF encoder driver for AMD graphic cards
 
 License:        EULA NON-REDISTRIBUTABLE

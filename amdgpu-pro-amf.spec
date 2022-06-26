@@ -17,8 +17,8 @@
 # Therefore it's illegal to distribute the .src.rpm or .rpm files to third
 # parties.
 
-%global major 21.50.2
-%global minor 1384496
+%global major 22.10.3
+%global minor 1420323
 
 # RPM flags
 %global debug_package %{nil}
@@ -30,8 +30,8 @@ Summary:        AMD AMF encoder driver for AMD graphic cards
 
 License:        EULA NON-REDISTRIBUTABLE
 URL:            https://www.amd.com/en/support/kb/release-notes/rn-amdgpu-unified-linux-21-50-2
-Source0:        http://repo.radeon.com/amdgpu/%{major}/ubuntu/pool/proprietary/a/amf-amdgpu-pro/amf-amdgpu-pro_1.4.24-%{minor}_amd64.deb
-Source1:        http://repo.radeon.com/amdgpu/%{major}/ubuntu/pool/proprietary/liba/libamdenc-amdgpu-pro/libamdenc-amdgpu-pro_1.0-%{minor}_amd64.deb
+Source0:        http://repo.radeon.com/amdgpu/22.10.3/ubuntu/pool/proprietary/a/amf-amdgpu-pro/amf-amdgpu-pro_1.4.24-1420323_amd64.deb
+Source1:        http://repo.radeon.com/amdgpu/22.10.3/ubuntu/pool/proprietary/liba/libamdenc-amdgpu-pro/libamdenc-amdgpu-pro_1.0-1420323_amd64.deb
 ExclusiveArch:  x86_64
 #BuildRequires:  
 Requires:       amdgpu-pro-vulkan
@@ -62,5 +62,8 @@ install -p -m755 files/opt/amdgpu-pro/lib/x86_64-linux-gnu/* %{buildroot}%{_libd
 
 
 %changelog
+* Sun Jun 26 2022 update - 22.10.3.1420323
+- Update to 22.10.3
+
 * Sun Mar 27 2022 initial commit - 21.50.2.1384495
 - Update to 21.50

@@ -17,21 +17,22 @@
 # Therefore it's illegal to distribute the .src.rpm or .rpm files to third
 # parties.
 
-%global major 22.10.3
-%global minor 1420323
+%global major 22.20
+%global minor 1438747
+%global ubuntu 22.04
 
 # RPM flags
 %global debug_package %{nil}
 
 Name:           amdgpu-pro-amf
 Version:        %{major}.%{minor}
-Release:        2%{?dist}
+Release:        1%{?dist}
 Summary:        AMD AMF encoder driver for AMD graphic cards
 
 License:        EULA NON-REDISTRIBUTABLE
 URL:            https://www.amd.com/en/support/kb/release-notes/rn-amdgpu-unified-linux-21-50-2
-Source0:        http://repo.radeon.com/amdgpu/22.10.3/ubuntu/pool/proprietary/a/amf-amdgpu-pro/amf-amdgpu-pro_1.4.24-1420323_amd64.deb
-Source1:        http://repo.radeon.com/amdgpu/22.10.3/ubuntu/pool/proprietary/liba/libamdenc-amdgpu-pro/libamdenc-amdgpu-pro_1.0-1420323_amd64.deb
+Source0:        http://repo.radeon.com/amdgpu/%{major}/ubuntu/pool/proprietary/a/amf-amdgpu-pro/amf-amdgpu-pro_1.4.26-%{minor}~%{ubuntu}_amd64.deb
+Source1:        http://repo.radeon.com/amdgpu/%{major}/ubuntu/pool/proprietary/liba/libamdenc-amdgpu-pro/libamdenc-amdgpu-pro_1.0-%{minor}~%{ubuntu}_amd64.deb
 ExclusiveArch:  x86_64
 #BuildRequires:  
 Requires:       amdgpu-pro-vulkan
@@ -45,11 +46,11 @@ is intended to work along with the free amdgpu stack.
 mkdir files
 # AMF
 cp %{SOURCE0} .
-ar x amf-amdgpu-pro_1.4.24-%{minor}_amd64.deb
+ar x amf-amdgpu-pro_1.4.26-%{minor}~%{ubuntu}_amd64.deb
 tar -xJC files -f data.tar.xz
 
 cp %{SOURCE1} .
-ar x libamdenc-amdgpu-pro_1.0-%{minor}_amd64.deb
+ar x libamdenc-amdgpu-pro_1.0-%{minor}~%{ubuntu}_amd64.deb
 tar -xJC files -f data.tar.xz
 
 %install

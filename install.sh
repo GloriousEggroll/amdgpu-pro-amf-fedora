@@ -6,12 +6,12 @@ OSVERSION=$(cat /etc/os-release | grep VERSION_ID | cut -d "=" -f 2)
 sudo dnf -y install mock pykickstart fedpkg
 
 # download AMD's AMDF libraries
-if [ ! -f "amf-amdgpu-pro_1.4.24-1420323_amd64.deb" ]; then
-wget --referer https://www.amd.com/en/support/kb/release-notes/rn-amdgpu-unified-linux-21-50 -N http://repo.radeon.com/amdgpu/22.10.3/ubuntu/pool/proprietary/a/amf-amdgpu-pro/amf-amdgpu-pro_1.4.24-1420323_amd64.deb
+if [ ! -f "amf-amdgpu-pro_1.4.26-1438747~22.04_amd64.deb" ]; then
+wget --referer https://www.amd.com/en/support/kb/release-notes/rn-amdgpu-unified-linux-21-50 -N http://repo.radeon.com/amdgpu/22.20/ubuntu/pool/proprietary/a/amf-amdgpu-pro/amf-amdgpu-pro_1.4.26-1438747~22.04_amd64.deb
 fi
 
-if [ ! -f "libamdenc-amdgpu-pro_1.0-1420323_amd64.deb" ]; then
-wget --referer https://www.amd.com/en/support/kb/release-notes/rn-amdgpu-unified-linux-21-50 -N http://repo.radeon.com/amdgpu/22.10.3/ubuntu/pool/proprietary/liba/libamdenc-amdgpu-pro/libamdenc-amdgpu-pro_1.0-1420323_amd64.deb 
+if [ ! -f "libamdenc-amdgpu-pro_1.0-1438747~22.04_amd64.deb " ]; then
+wget --referer https://www.amd.com/en/support/kb/release-notes/rn-amdgpu-unified-linux-21-50 -N http://repo.radeon.com/amdgpu/22.20/ubuntu/pool/proprietary/liba/libamdenc-amdgpu-pro/libamdenc-amdgpu-pro_1.0-1438747~22.04_amd64.deb 
 fi
 
 # create a fedora srpm from the spec sheet
